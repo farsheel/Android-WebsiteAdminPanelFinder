@@ -55,8 +55,16 @@ public class AdminPanel extends AppCompatActivity {
 
     }
 
-    private class AdminFinderTask extends AsyncTask<Void,Integer,String>
+    private class AdminFinderTask extends AsyncTask<Void,String,String>
     {
+        @Override
+        protected void onProgressUpdate(String... values) {
+            super.onProgressUpdate(values);
+            for (String value : values) {
+                pd.setMessage("Checking.. \n" + value);
+            }
+
+        }
 
         @Override
         protected void onPreExecute() {
@@ -109,6 +117,7 @@ public class AdminPanel extends AppCompatActivity {
                     HttpURLConnection con= (HttpURLConnection) url.openConnection();
                     con.setConnectTimeout(1500);
                     con.connect();
+                    publishProgress(urlCon);
                     if(con.getResponseCode()==200)
                     {
                         UrlModel um=new UrlModel(urlCon,"200");
@@ -127,7 +136,8 @@ public class AdminPanel extends AppCompatActivity {
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             } catch (IOException e) {
-                Toast.makeText(getApplicationContext(),"Failed:",Toast.LENGTH_SHORT).show();            }
+                e.printStackTrace();
+            }
 
             return null;
         }

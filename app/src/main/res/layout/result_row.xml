@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/tvUrl"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="@color/colorPrimaryDark" />
 
             <TextView
                 android:text="TextView"
@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/tvResponse"
                 android:textAppearance="@style/TextAppearance.AppCompat.Button"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="@color/colorPrimaryDark" />
 
         </LinearLayout>
 
