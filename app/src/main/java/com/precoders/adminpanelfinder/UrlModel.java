@@ -13,16 +13,6 @@ public class UrlModel {
         this.status=status;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-
-
     public String getUrl() {
         return url;
     }

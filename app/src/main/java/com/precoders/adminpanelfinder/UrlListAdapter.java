@@ -13,7 +13,6 @@ import android.widget.Toast;
 
 import java.util.List;
 
-import static android.content.Context.CLIPBOARD_SERVICE;
 
 /**
  * Created by Farsheel on 6/8/17.
